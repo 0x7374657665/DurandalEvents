@@ -1,0 +1,12 @@
+<section class="new-task well">
+    <form data-bind="submit: addTask">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Add new task..." data-bind="value: description">
+            <span class="input-group-btn">
+                <button class="btn btn-primary" type="button" data-bind="click: addTask">
+                    <i class="glyphicon glyphicon-plus"></i>
+                </button>
+            </span>
+        </div>
+    </form>
+</section>

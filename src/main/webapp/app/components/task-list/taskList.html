@@ -1,0 +1,10 @@
+<section class="task-list well">
+    <form data-bind="foreach: list.items">
+        <div class="form-check">
+            <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" data-bind="checked: complete">
+                <span data-bind="text: description, style: {'text-decoration': complete() ? 'line-through' : 'none'}"></span>
+            </label>
+        </div>
+    </form>
+</section>

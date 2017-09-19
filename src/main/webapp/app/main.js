@@ -16,7 +16,7 @@
     }
 });
 
-define(['durandal/system', 'durandal/app', 'durandal/viewLocator', 'bootstrap'],  function (system, app, viewLocator) {
+define(['durandal/system', 'durandal/app', 'durandal/viewLocator', 'bootstrap', 'knockout'],  function (system, app, viewLocator, bs, ko) {
     //>>excludeStart("build", true);
     system.debug(true);
     //>>excludeEnd("build");
@@ -26,6 +26,18 @@ define(['durandal/system', 'durandal/app', 'durandal/viewLocator', 'bootstrap'],
     app.configurePlugins({
         router:true,
         dialog: true
+    });
+
+    console.log('knockout:', ko);
+
+    ko.components.register('new-task', {
+        viewModel: {require: 'components/new-task/newTask'},
+        template: {require: 'text!components/new-task/newTask.html'}
+    });
+
+    ko.components.register('task-list', {
+        viewModel: {require: 'components/task-list/taskList'},
+        template: {require: 'text!components/task-list/taskList.html'}
     });
 
     app.start().then(function() {

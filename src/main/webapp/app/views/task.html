@@ -1,0 +1,15 @@
+<section id="tasks">
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            <h1>Tasks</h1>
+            <hr>
+            <new-task params="events: eventAggregator"></new-task>
+            <task-list params="events: eventAggregator" data-bind="visible: cleanVisible"></task-list>
+            <section class="btn btn-primary pull-right" data-bind="click: clean, visible: cleanVisible">
+                <i class="glyphicon glyphicon-trash"></i>&nbsp;&nbsp;Remove Completed
+            </section>
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+</section>
